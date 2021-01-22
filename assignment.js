@@ -2,24 +2,40 @@
 
 // PROBLEM 1
 function kilometerToMeter(km) {
-    if (km < 0) {
-        return "Negative input is not acceceptable";
+    if(isNaN(km)){
+        return "string is not acceptable"
+    }
+    else if (km < 0) {
+        return "Negative input is not acceptable";
     }
     else {
         // 1km = 1000m
         meter = 1000 * km;
-        return meter;
     }
+    return meter;
 }
-var result1 = kilometerToMeter(5);
-console.log("Meter:", result1);
+var result1 = kilometerToMeter(7);
+console.log(result1);
+
 
 
 
 // PROBLEM 1
 function budgetCalculator(watch, phone, laptop) {
-    if (watch < 0 || phone < 0 || laptop < 0) {
-        return "Negative input is not acceceptable";
+    // checking it is string or not
+    if(isNaN(watch)){
+        return "string is not acceptable";
+    }
+    // checking it is string or not
+    else if(isNaN(phone)){
+        return "string is not acceptable";
+    }
+    // checking it is string or not
+    else if(isNaN(laptop)){
+        return "string is not acceptable";
+    }
+    else if (watch < 0 || phone < 0 || laptop < 0) {
+        return "Negative input is not acceptable";
     }
     else {
         watchPrice = 50 * watch;
@@ -29,19 +45,23 @@ function budgetCalculator(watch, phone, laptop) {
     }
     return totalBudget
 }
-var budget = budgetCalculator(2, 2, 2);
-console.log("Total budget:", budget);
+var budget = budgetCalculator(2, 2, 3);
+console.log(budget);
+
 
 
 
 // PROBLEM 2
 function hotelCost(day) {
     var totalCost = 0;
-    if (day == 0) {
-        return "0 is not acceceptable";
+    if(isNaN(day)){
+        return "string is not acceptable";
+    }
+    else if (day == 0) {
+        return "0 is not acceptable";
     }
     else if (day < 0) {
-        return "Negative input is not acceceptable";
+        return "Negative input is not acceptable";
     }
     else if (day <= 10) {
         totalCost = day * 100;
@@ -62,7 +82,7 @@ function hotelCost(day) {
     return totalCost;
 }
 var costResutlt = hotelCost(22);
-console.log("Total hotel cost:", costResutlt);
+console.log( costResutlt);
 
 
 
@@ -71,7 +91,6 @@ function megaFriend(names) {
     var max = 0;
     var megaFriend;
     for (var i = 0; i < names.length; i++) {
-        // checking it is string or not
         if (isNaN(names[i])) {
             if (names[i].length > max) {
                 var max = names[i].length;
@@ -80,11 +99,11 @@ function megaFriend(names) {
             
         }
         else{
-            return "Number is not acceceptable";
+            return "Number is not acceptable";
         }
     }
     return megaFriend;
 }
 
 var result2 = megaFriend(['zawad', 'sakib', 'mushfiqur rahim', 'Mahmudullah']);
-console.log("Mege Friend:", result2);
+console.log(result2);
