@@ -20,7 +20,7 @@ console.log(result1);
 
 
 
-// PROBLEM 1
+// PROBLEM 2
 function budgetCalculator(watch, phone, laptop) {
     // checking it is string or not
     if(isNaN(watch)){
@@ -51,7 +51,7 @@ console.log(budget);
 
 
 
-// PROBLEM 2
+// PROBLEM 3
 function hotelCost(day) {
     var totalCost = 0;
     if(isNaN(day)){
@@ -86,7 +86,7 @@ console.log( costResutlt);
 
 
 
-// PROBLEM 3
+// PROBLEM 4
 function megaFriend(names) {
     var max = 0;
     var megaFriend;
